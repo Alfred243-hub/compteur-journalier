@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compteur Journalier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        #counter {
+            font-size: 48px;
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Compteur Journalier</h1>
+    <div id="counter">0</div>
+    <button onclick="resetCounter()">Remettre à zéro</button>
+
+    <script>
+        // Initialisation du compteur à 15
+        let counter = 15;
+
+        // Fonction pour mettre à jour l'affichage du compteur
+        function updateCounter() {
+            document.getElementById('counter').innerText = counter;
+        }
+
+        // Fonction pour réinitialiser le compteur à zéro
+        function resetCounter() {
+            counter = 0;
+            updateCounter();
+        }
+
+        // Fonction pour incrémenter le compteur chaque jour
+        function incrementCounter() {
+            counter++;
+            updateCounter();
+        }
+
+        // Simule l'incrémentation quotidienne (ici, il n'y a pas de gestion de minuit pour simplifier)
+        updateCounter();
+
+    </script>
+
+</body>
+</html>
